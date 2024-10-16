@@ -25,6 +25,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportRuntimeHints;
 
+import java.util.concurrent.ExecutionException;
+
 /**
  * PetClinic Spring Boot Application.
  *
@@ -35,7 +37,7 @@ import org.springframework.context.annotation.ImportRuntimeHints;
 @ImportRuntimeHints(PetClinicRuntimeHints.class)
 public class PetClinicApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ExecutionException, InterruptedException {
 
 		SpringApplication.run(PetClinicApplication.class, args);
 		// Initialize container class that we created earlier
